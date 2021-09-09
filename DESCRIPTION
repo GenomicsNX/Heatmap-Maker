@@ -1,5 +1,5 @@
 Package: HeatmapMaker
-Title: What the Package Does (One Line, Title Case)
+Title: A Shiny App to Make Heatmaps
 Version: 1.0.0
 Authors@R: 
     person(given = "Juan Pablo",
@@ -7,7 +7,6 @@ Authors@R:
            role = c("aut", "cre"),
            email = "jpch_26@outlook.com",
            comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: A shiny app to make heatmaps.
 License: use_mit_license()
 Encoding: UTF-8
 LazyData: true
