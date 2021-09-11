@@ -7,8 +7,18 @@ Authors@R:
            role = c("aut", "cre"),
            email = "jpch_26@outlook.com",
            comment = c(ORCID = "YOUR-ORCID-ID"))
+Description: This app can plot heatmaps from data in distinct formats. At the core uses the function heatmap.2 from the gplots package.
 License: use_mit_license()
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
+Imports: 
+    gplots,
+    pkgload,
+    purrr,
+    RColorBrewer,
+    shiny,
+    tibble
+Depends: 
+    R (>= 2.10)
