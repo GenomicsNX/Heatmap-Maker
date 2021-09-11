@@ -7,7 +7,9 @@ image_w <- 7
 image_h <- 7
 
 # Available colors (color blind friendly)
-av_colors <- row.names(brewer.pal.info[brewer.pal.info$colorblind == TRUE, ])
+av_colors <- row.names(
+  RColorBrewer::brewer.pal.info[RColorBrewer::brewer.pal.info$colorblind == TRUE, ]
+  )
 
 # Slide inputs values
 slide_values <- tibble::tribble(
