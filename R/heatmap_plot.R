@@ -1,5 +1,3 @@
-library(gplots)
-library(RColorBrewer)
 
 # Helpers ------------------------------------------------------------
 
@@ -24,13 +22,17 @@ heatmap_col_names <- function(select, data_set) {
 # Helper to set column side colors in the heatmap
 colside_colors <- function(dataset) {
   column_levels <- as.numeric(as.factor(colnames(dataset)))
-  palette(brewer.pal(8, "Dark2"))[column_levels]
+  palette(
+    RColorBrewer::brewer.pal(8, "Dark2")
+    )[column_levels]
 }
 
 # Helper to set row side colors in the heatmap
 rowside_colors <- function(dataset) {
   row_levels <- as.numeric(as.factor(rownames(dataset)))
-  palette(brewer.pal(8, "Dark2"))[row_levels]
+  palette(
+    RColorBrewer::brewer.pal(8, "Dark2")
+    )[row_levels]
 }
 
 # Heatmap plot function ---------------------------------------------------
@@ -39,12 +41,14 @@ heatmap_plot <- function(data_set, heatmap_colors, colside, dendrogram, x_lab,
                          y_lab, xlab_space, ylab_space, row_names, col_names,
                          cex_row, cex_col) {
   ## Heatmap colors
-  plot_colors <- colorRampPalette(brewer.pal(8, heatmap_colors))(100)
+  plot_colors <-colorRampPalette(
+    RColorBrewer::brewer.pal(8, heatmap_colors)
+    )(100)
   
   ## Plot heatmap 
   if (colside == "column") {
     
-    heatmap.2(
+    gplots::heatmap.2(
       data_set,
       trace = "none",
       dendrogram = dendrogram,
@@ -61,7 +65,7 @@ heatmap_plot <- function(data_set, heatmap_colors, colside, dendrogram, x_lab,
     
   } else if (colside == "row") {
     
-    heatmap.2(
+    gplots::heatmap.2(
       data_set,
       trace = "none",
       dendrogram = dendrogram,
@@ -78,7 +82,7 @@ heatmap_plot <- function(data_set, heatmap_colors, colside, dendrogram, x_lab,
 
   } else if (colside == "both") {
     
-    heatmap.2(
+    gplots::heatmap.2(
       data_set,
       trace = "none",
       dendrogram = dendrogram,
@@ -97,7 +101,7 @@ heatmap_plot <- function(data_set, heatmap_colors, colside, dendrogram, x_lab,
     
   } else {
     
-    heatmap.2(
+    gplots::heatmap.2(
       data_set,
       trace = "none",
       dendrogram = dendrogram,
