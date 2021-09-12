@@ -2,8 +2,8 @@ library(shiny)
 
 heatMapApp <- function() {
   ui <- fluidPage(
-    theme = bslib::bs_theme(bootswatch = "cerulean"),
-    titlePanel("Heatmap Maker v 1.0"),
+    theme = bslib::bs_theme(bootswatch = "cerulean", font_scale = 0.8),
+    titlePanel("Heatmap Maker v 1.0.0"),
     sidebarLayout(
       sidebarPanel(
         fluidRow(
@@ -19,8 +19,9 @@ heatMapApp <- function() {
         )
       ),
       mainPanel(
-        plotOutput("plot", height = 750),
-        radioButtons("format", "Choose format", c("png", "jpeg", "pdf"), inline = TRUE),
+        plotOutput("plot", height = 700),
+        textInput("filename", "File name:", placeholder = "My heatmap"),
+        radioButtons("format", "Choose format", c("png", "bmp", "pdf"), inline = TRUE),
         downloadButton("download", "Download Heatmap"),
       )
     ),
@@ -50,7 +51,7 @@ heatMapApp <- function() {
     # Download Heatmap
     output$download <- downloadHandler(
       filename = function() {
-        paste0(Sys.Date(), "-Heatmap.", input$format)
+        paste0(input$filename, ".", input$format)
       },
       content = function(file) {
         if (input$format == "png") {
@@ -58,10 +59,10 @@ heatMapApp <- function() {
             file, width = image_w, height = image_h, res = 300,
             units = "in", pointsize = image_p
           )
-        } else if (input$format == "jpeg") {
-          jpeg(
+        } else if (input$format == "bmp") {
+          bmp(
             file, width = image_w, height = image_h, res = 300,
-            units = "in", pointsize = image_p, quality = 200
+            units = "in", pointsize = image_p
           )
         } else {
           pdf(file, pointsize = image_p)
@@ -80,3 +81,5 @@ heatMapApp <- function() {
   shinyApp(ui = ui, server = server)
 
 }
+
+heatMapApp()
