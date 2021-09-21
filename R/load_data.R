@@ -3,8 +3,7 @@
 
 load_data <- function(name, path, file = NULL){
   if (is.null(file)) {
-    data <- read.table("sample_data/expression_data_1.txt", check.names = FALSE)
-    data <- as.matrix(data)
+    data <- as.matrix(sample_data)
   } else {
     ext <- tools::file_ext(name)
     if (ext == "csv") {
