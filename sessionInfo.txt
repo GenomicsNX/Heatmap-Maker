@@ -10,29 +10,28 @@ locale:
 [5] LC_TIME=Spanish_Mexico.1252    
 
 attached base packages:
-[1] stats     graphics  grDevices datasets  utils     methods  
+[1] stats     graphics  grDevices utils     datasets  methods  
 [7] base     
 
 other attached packages:
-[1] HeatmapMaker_1.0.0 RColorBrewer_1.1-2 gplots_3.1.1      
-[4] shiny_1.6.0       
+[1] HeatmapMaker_1.0.0 shiny_1.6.0        usethis_2.0.1     
 
 loaded via a namespace (and not attached):
- [1] Rcpp_1.0.7         pillar_1.6.2       compiler_4.1.1    
- [4] bslib_0.2.5.1      later_1.2.0        jquerylib_0.1.4   
- [7] remotes_2.4.0      prettyunits_1.1.1  bitops_1.0-7      
-[10] tools_4.1.1        testthat_3.0.4     digest_0.6.27     
-[13] pkgbuild_1.2.0     pkgload_1.2.1      tibble_3.1.3      
-[16] jsonlite_1.7.2     memoise_2.0.0      lifecycle_1.0.0   
-[19] pkgconfig_2.0.3    rlang_0.4.11       rstudioapi_0.13   
-[22] cli_3.0.1          fastmap_1.1.0      withr_2.4.2       
-[25] vctrs_0.3.8        desc_1.3.0         sass_0.4.0        
-[28] fs_1.5.0           gtools_3.9.2       caTools_1.18.2    
-[31] devtools_2.4.2     rprojroot_2.0.2    glue_1.4.2        
-[34] R6_2.5.0           processx_3.5.2     fansi_0.5.0       
-[37] sessioninfo_1.1.1  purrr_0.3.4        callr_3.7.0       
-[40] magrittr_2.0.1     usethis_2.0.1      ps_1.6.0          
-[43] promises_1.2.0.1   ellipsis_0.3.2     htmltools_0.5.1.1 
-[46] mime_0.11          xtable_1.8-4       renv_0.14.0       
-[49] httpuv_1.6.1       utf8_1.2.2         KernSmooth_2.23-20
-[52] cachem_1.0.6       crayon_1.4.1      
+ [1] Rcpp_1.0.7         jquerylib_0.1.4    bslib_0.2.5.1     
+ [4] pillar_1.6.2       later_1.2.0        compiler_4.1.1    
+ [7] RColorBrewer_1.1-2 prettyunits_1.1.1  bitops_1.0-7      
+[10] remotes_2.4.0      tools_4.1.1        testthat_3.0.4    
+[13] digest_0.6.27      pkgbuild_1.2.0     pkgload_1.2.1     
+[16] jsonlite_1.7.2     tibble_3.1.3       memoise_2.0.0     
+[19] lifecycle_1.0.0    pkgconfig_2.0.3    rlang_0.4.11      
+[22] cli_3.0.1          rstudioapi_0.13    fastmap_1.1.0     
+[25] withr_2.4.2        sass_0.4.0         vctrs_0.3.8       
+[28] desc_1.3.0         fs_1.5.0           gtools_3.9.2      
+[31] caTools_1.18.2     devtools_2.4.2     rprojroot_2.0.2   
+[34] glue_1.4.2         R6_2.5.0           processx_3.5.2    
+[37] fansi_0.5.0        sessioninfo_1.1.1  callr_3.7.0       
+[40] purrr_0.3.4        magrittr_2.0.1     promises_1.2.0.1  
+[43] gplots_3.1.1       ps_1.6.0           ellipsis_0.3.2    
+[46] htmltools_0.5.1.1  rsconnect_0.8.24   xtable_1.8-4      
+[49] mime_0.11          httpuv_1.6.1       utf8_1.2.2        
+[52] KernSmooth_2.23-20 cachem_1.0.6       crayon_1.4.1      
