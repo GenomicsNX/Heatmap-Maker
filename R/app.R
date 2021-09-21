@@ -1,3 +1,4 @@
+library(shiny)
 
 heatMapApp <- function() {
   ui <- fluidPage(
@@ -80,5 +81,3 @@ heatMapApp <- function() {
   shinyApp(ui = ui, server = server)
 
 }
-
-heatMapApp()
