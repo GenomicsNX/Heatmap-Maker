@@ -3,7 +3,14 @@
 
 loadDataUI <- function(id) {
   tagList(
-    fileInput(NS(id, "file"), "Upload a file", accept = c(".csv", ".tsv", ".txt"))
+    fileInput(
+      NS(id, "file"), 
+      NULL, 
+      accept = c(".csv", ".tsv", ".txt"),
+      buttonLabel = "Upload a file...",
+      placeholder = "CSV (.csv), TSV (.tsv) or TXT (.txt) data file",
+      width = '90%'
+      )
   )
 }
 
