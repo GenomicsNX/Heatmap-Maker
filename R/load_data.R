@@ -14,10 +14,11 @@ load_data <- function(name, path, file = NULL){
     } else if (ext == "tsv") {
       data <- read.delim(path, check.names = FALSE)
     } else if (ext == "txt") {
-      data <- read.table(path, sep = ",", check.names = FALSE)
+      data <- read.table(path, check.names = FALSE)
     } else {
       warning("Invalid file. Please updoload .csv, .txt or .tsv file")
     }
   }
-  return(data)
+  if (!is.matrix(data)) return(as.matrix(data))
+  else return(data)
 }
