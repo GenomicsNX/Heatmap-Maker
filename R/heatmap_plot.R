@@ -32,7 +32,7 @@ side_colors <- function(dataset, margin = 1) {
     RColorBrewer::brewer.pal(12, "Paired"), bias = 5
   )(length(levels_name))
   
-  palette(color_ramp)[levels_name]
+  color_ramp
   
 }
 
