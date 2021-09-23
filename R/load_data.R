@@ -7,12 +7,17 @@ load_data <- function(name, path, file = NULL){
   } else {
     ext <- tools::file_ext(name)
     if (ext == "csv") {
+      
       data  <- read.csv(path, check.names = FALSE)
       row_names <- data[,1]
+      col_names <- colnames(data)[-1]
       data  <- as.matrix(data[,-1])
+      
       rownames(data) <- row_names
+      colnames(data) <- col_names
+      
     } else if (ext == "tsv") {
-      data <- read.delim(path, check.names = FALSE)
+      data <- read.table(path, check.names = FALSE)
     } else if (ext == "txt") {
       data <- read.table(path, check.names = FALSE)
     } else {
