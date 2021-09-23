@@ -26,13 +26,13 @@ side_colors <- function(dataset, margin = 1) {
   else if (margin == 2) levels_name <- colnames(dataset)
   else stop("Please, choose a valid margin (1 or 2)")
   
-  levels_name <- as.numeric(as.factor(levels_name))
+  levels_name <- as.factor(levels_name)
   
   color_ramp <- colorRampPalette(
-    RColorBrewer::brewer.pal(12, "Paired"), bias = 5
-  )(length(levels_name))
+    RColorBrewer::brewer.pal(12, "Paired"), bias = 4
+  )(length(levels(levels_name)))
   
-  color_ramp
+  color_ramp[levels_name]
   
 }
 
