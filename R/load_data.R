@@ -24,6 +24,8 @@ load_data <- function(name, path, file = NULL){
       warning("Invalid file. Please updoload .csv, .txt or .tsv file")
     }
   }
+  
   if (!is.matrix(data)) return(as.matrix(data))
   else return(data)
+  
 }
