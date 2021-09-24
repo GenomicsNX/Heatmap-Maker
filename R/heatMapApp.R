@@ -3,7 +3,7 @@ library(shiny)
 heatMapApp <- function() {
   ui <- fluidPage(
     theme = bslib::bs_theme(bootswatch = "cerulean", font_scale = 0.8),
-    titlePanel("Heatmap Maker v 1.0.0"),
+    titlePanel("Heatmap Maker"),
     sidebarLayout(
       sidebarPanel(
         fluidRow(
