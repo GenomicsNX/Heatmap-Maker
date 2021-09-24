@@ -1,4 +1,4 @@
-HeatmapMaker v 1.0.0 
+Heatmap Maker
 ================
 
 A shiny app to make heat maps from TXT, CSV and TSV data files.
@@ -7,7 +7,7 @@ You can use HeatmapMaker through three options:
 
 #### 1
 
-Simply download it from this GitHub page or through GitHub Desktop. Once in the HeatmapMaker main folder, juct double click the .Rproj file and type in the R console (you need devtools pacakge):
+Simply download it from this GitHub page or through GitHub Desktop. Once in the HeatmapMaker main directory, just double click the .Rproj file and type in the R console (you need devtools pacakge):
 
 `devtools::laod_all(".")`
 
@@ -31,20 +31,25 @@ and finally:
 
 #### 3
 
-Use the app directly, without R or RStudio, by clicking in the next link:
+Use the app directly, you do not need R or RStudio, by clicking in the next link:
 
 https://r-inthelab-net.shinyapps.io/HeatmapMaker/ 
 
  
 
-Possibly, the third will not be a long term option to use the app because shinyapp.io just allow to publish five apps simultaneously. I hope in the future I will able to find a good solution for this (or maybe I will pay for it...).
+Possibly, the third will not be a long term option to use the app because shinyapp.io just allow to publish five apps simultaneously, which also includes other limitations. I hope in the future I will able to find a good solution for this (or maybe I will pay for it...).
 
-Currently I'm working on a brief tutorial to explain the types of data and the several options in the app, thank you :)
+You can check out a brief tutorial by clicking on:  
 
-22/Sept/2021
+https://r-inthelab.net/2021/09/23/heatmap-maker-shiny-app/
+
+Thank you so much for your time.  
+
+23/Sept/2021
 
 Juan Pablo Carreón Hidalgo
 
 <jpch_26@outlook.com>
+<https://twitter.com/JuanPa2601>
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
