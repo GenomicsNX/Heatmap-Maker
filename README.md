@@ -13,7 +13,7 @@ Simply download it from this GitHub page or through GitHub Desktop. Once in the 
 
 and then:
 
-`heatMapApp()`
+`HeatmapMaker()`
 
 #### 2
 
