@@ -7,7 +7,7 @@ You can use HeatmapMaker through three options:
 
 #### 1
 
-Simply download it from this GitHub page or through GitHub Desktop. Once in the HeatmapMaker main directory, just double click the .Rproj file and type in the R console (you need devtools pacakge):
+Simply download it from this GitHub page or through GitHub Desktop. Once in the HeatmapMaker main directory, just double click the .Rproj file and type in the R console (you need devtools package):
 
 `devtools::laod_all(".")`
 
@@ -27,7 +27,9 @@ then:
 
 and finally:
 
-`heatMapApp()`
+`HeatmapMaker()`  
+
+To do the above, you can also run the file app.R in HeatmapMaker main directory.
 
 #### 3
 
@@ -45,11 +47,9 @@ https://r-inthelab.net/2021/09/23/heatmap-maker-shiny-app/
 
 Thank you so much for your time.  
 
-23/Sept/2021
-
 Juan Pablo Carreón Hidalgo
 
-<jpch_26@outlook.com>
+<jpch_26@outlook.com>  
 <https://twitter.com/JuanPa2601>
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.html)
