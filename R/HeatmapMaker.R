@@ -1,6 +1,6 @@
 library(shiny)
 
-heatMapApp <- function() {
+HeatmapMaker <- function() {
   ui <- fluidPage(
     theme = bslib::bs_theme(bootswatch = "cerulean", font_scale = 0.8),
     titlePanel("Heatmap Maker"),
@@ -22,7 +22,7 @@ heatMapApp <- function() {
         plotOutput("plot", height = 700),
         textInput("filename", "File name:", placeholder = "My heatmap"),
         radioButtons("format", "Choose format", c("png", "bmp", "pdf"), inline = TRUE),
-        downloadButton("download", "Download Heatmap"),
+        downloadButton("download", "Download Heatmap")
       )
     ),
   )
@@ -39,13 +39,15 @@ heatMapApp <- function() {
     
     # Display Heatmap
     output$plot <- renderPlot(
-      heatmap_plot(data(), input$heat_map_color, colside = input$colside,
-                   dendrogram = input$dendrogram, x_lab = input$x_lab, 
-                   y_lab = input$y_lab, xlab_space = input$adj_xlab,
-                   ylab_space = input$adj_ylab, row_names = row_names(),
-                   col_names = col_names(), cex_row = input$cex_row, 
-                   cex_col = input$cex_col), 
-      res = 96
+      res = 96,
+      {
+        heatmap_plot(data(), input$heat_map_color, colside = input$colside,
+                     dendrogram = input$dendrogram, x_lab = input$x_lab, 
+                     y_lab = input$y_lab, xlab_space = input$adj_xlab,
+                     ylab_space = input$adj_ylab, row_names = row_names(),
+                     col_names = col_names(), cex_row = input$cex_row, 
+                     cex_col = input$cex_col)
+      }
     )
     
     # Download Heatmap
